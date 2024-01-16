@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 16px;
+}
+#btnContainer{
+    margin: 50px auto;
+    display: flex;
+    width: 50vw;
+    justify-content: space-around;
+    padding: 0 auto;
+}
+.button{
+    width: 250px;
+    height: 50px;
+    margin: 0 auto;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 2rem;
+}
+#btn1{
+    background-color: #000;
+    color: #fff;
+    transition: background-color 0.3s, color 5s;
+}
+#btn1:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+#btn2 {
+    transition:
+        box-shadow .2s ease-out 0s,
+        border-radius .4s ease-in .4s,
+        transform .4s ease-in .6s;
+}
+
+#btn2:hover {
+    /**box-shadow: 8px 1px 1.5625rem 0px blue, -8px -8px 25px 0px hotpink;**/
+    box-shadow: 8px 1px 35px 0px blue, -8px -8px 25px 0px hotpink, 16px 16px 25px 0px green;
+    border-radius: 100px;
+    transform: translateY(-.25rem);
+}
+
+/* ball section */
+
+#ballMotion{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ball{
+    position: absolute;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 3px solid blue;
+}
+#ball1{
+    animation-name: ballTime;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+#ball2{
+    animation-name: ballTime;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    border-color: red;
+}
+#ball3{
+    animation-name: ballTime;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    border-color: green;
+}
+#ball4{
+    animation-name: ballTime;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+    border-color: yellow;
+}
+
+
+@keyframes ballTime{
+    0% { transform: translateX(0);}
+    20%{transform: translate(60px, 0);}
+    40%{transform: translate(-120px, 60px);}
+    60%{transform: translate(60px, -120px);}
+    80%{transform: translate(-60px, 60px);}
+    100%{transform: translate(0px, 0px);}
+}
